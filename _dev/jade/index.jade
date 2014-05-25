@@ -1,0 +1,175 @@
+!!! 5
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=yes')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    title 今日のお薬 : お薬手帳
+    link(rel='stylesheet', type='text/css', href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='css/custom.css')
+  body#index
+    nav.navbar.navbar-fixed-bottom
+      .navbar-inner.clearfix
+        ul.nav
+          li
+            a(href='index.html')
+              span.glyphicon.glyphicon-calendar
+              br
+              | 今日のお薬
+          li
+            a(href='regist.html')
+              span.glyphicon.glyphicon-pencil
+              br
+              | お薬を登録
+          li
+            a(href='list.html')
+              span.glyphicon.glyphicon-list
+              br
+              | お薬一覧
+          li
+            a(href='profile.html')
+              span.glyphicon.glyphicon-user
+              br
+              | プロフィール
+    header
+      h1 お薬手帳
+      h2
+        span.glyphicon.glyphicon-calendar
+        | 今日のお薬
+      input#authorize-button(type='button', value='Authorize')
+    main.container
+      h1 朝
+      table.table.table-hover.table-responsive
+        tbody
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+      h1 昼
+      table.table.table-hover.table-responsive
+        tbody
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+      h1 夕
+      table.table.table-hover.table-responsive
+        tbody
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+      h1 就寝前
+      table.table.table-hover.table-responsive
+        tbody
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+          tr
+            td 食前
+            th なんとか錠
+            td 40mg
+            td 1
+            td
+              label.checkbox
+                input(type='checkbox')
+                | 飲んでない
+  /if lte IE 8
+  script(src='http://code.jquery.com/jquery-2.0.3.min.js')
+  script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js')
+  script(src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+  script(src='js/min/script.min.js')
+  script(src='https://apis.google.com/js/client.js?onload=setInitialize')
+  script
+      $(function(){
+        // Run a request to SELECT data.
+        function selectData() {
+          query('SELECT * FROM ' + timetable_table_id, function(res){
+            console.log(res);
+          });
+        }
+      })

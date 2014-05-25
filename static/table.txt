@@ -1,0 +1,22 @@
+list table
+columnid id
+shohoudate date
+nomikata number
+name string
+ryou string
+kosuu number
+nokori number
+bikou string
+
+
+today table
+columnid id
+date date
+timming number
+nomikata number
+name string
+ryou string
+kosuu number
+nondakadoua boolean
+
+

@@ -1,0 +1,77 @@
+!!! 5
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=yes')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    title プロフィール : お薬手帳
+    link(rel='stylesheet', type='text/css', href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='css/custom.css')
+  body#profile
+    nav.navbar.navbar-fixed-bottom
+      .navbar-inner.clearfix
+        ul.nav
+          li
+            a(href='index.html')
+              span.glyphicon.glyphicon-calendar
+              br
+              | 今日のお薬
+          li
+            a(href='regist.html')
+              span.glyphicon.glyphicon-pencil
+              br
+              | お薬を登録
+          li
+            a(href='list.html')
+              span.glyphicon.glyphicon-list
+              br
+              | お薬一覧
+          li
+            a(href='profile.html')
+              span.glyphicon.glyphicon-user
+              br
+              | プロフィール
+    header
+      h1 お薬手帳
+      h2
+        span.glyphicon.glyphicon-user
+        | プロフィール
+    main.container
+      table.table.table-hover.table-responsive
+        tbody
+          tr.name
+            th 名前
+            td ああああ
+          tr.sex
+            th 性別
+            td 男性
+          tr.birthday
+            th 生年月日
+            td 1234/14/15
+          tr.sideEffect
+            th 副作用
+            td
+          tr.allergy
+            th アレルギー
+            td
+          tr.illness
+            th 既往歴
+            td
+          tr.notCapable
+            th 使用できない薬
+            td
+          tr.attentionUse
+            th 使用に注意が必要な薬
+            td
+          tr.otc
+            th 常用している一般薬、健康食品
+            td
+          tr.medicalInstitution
+            th かかっている医療機関
+            td
+  /if lte IE 8
+  script(src='http://code.jquery.com/jquery-2.0.3.min.js')
+  script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js')
+  script(src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+  script(src='js/min/script.min.js')
+  script(src='https://apis.google.com/js/client.js?onload=initialize')

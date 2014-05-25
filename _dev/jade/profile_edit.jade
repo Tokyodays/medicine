@@ -1,0 +1,103 @@
+!!! 5
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=yes')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edges')
+    title プロフィール : お薬手帳
+    link(rel='stylesheet', type='text/css', href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery.ui.all.css')
+    link(rel='stylesheet', type='text/css', href='css/custom.css')
+  body#profile_edit
+    nav.navbar.navbar-fixed-bottom
+      .navbar-inner.clearfix
+        ul.nav
+          li
+            a(href='index.html')
+              span.glyphicon.glyphicon-calendar
+              br
+              | 今日のお薬
+          li
+            a(href='regist.html')
+              span.glyphicon.glyphicon-pencil
+              br
+              | お薬を登録
+          li
+            a(href='list.html')
+              span.glyphicon.glyphicon-list
+              br
+              | お薬一覧
+          li
+            a(href='profile.html')
+              span.glyphicon.glyphicon-user
+              br
+              | プロフィール
+    header
+      h1 お薬手帳
+      h2
+        span.glyphicon.glyphicon-pencil
+        | プロフィールを編集
+    main.container
+      form.form-horizontal(role='form')
+        .form-group
+          label.col-sm-3.control-label(for='name') 名前 ：
+          .col-sm-9
+            input#name.form-control.input-lg(type='email', placeholder='名前')
+        .form-group
+          label.col-sm-3.control-label(for='sex') 性別 ：
+          .col-sm-9
+            .btn-group(data-toggle='buttons')
+              label.btn.btn-primary
+                input#option1(type='radio', name='options')
+                | 男性
+              label.btn.btn-primary
+                input#option2(type='radio', name='options')
+                | 女性
+        .form-group
+          label.col-sm-3.control-label(for='birthday') 生年月日 ：
+          .col-sm-9
+            input#birthday.form-control.input-lg(type='email', placeholder='生年月日')
+        .form-group
+          label.col-sm-3.control-label(for='sideEffect') 副作用 ：
+          .col-sm-9
+            textarea#sideEffect.form-control(rows='3')
+        .form-group
+          label.col-sm-3.control-label(for='allergy') アレルギー ：
+          .col-sm-9
+            textarea#allergy.form-control(rows='3')
+        .form-group
+          label.col-sm-3.control-label(for='illness') 既往歴 ：
+          .col-sm-9
+            textarea#illness.form-control(rows='3')
+        .form-group
+          label.col-sm-3.control-label(for='notCapable') 使用できない薬 ：
+          .col-sm-9
+            textarea#notCapable.form-control(rows='3')
+        .form-group
+          label.col-sm-3.control-label(for='attentionUse') 使用に注意が必要な薬 ：
+          .col-sm-9
+            textarea#attentionUse.form-control(rows='3')
+        .form-group
+          label.col-sm-3.control-label(for='otc') 過去の大きな病気 ：
+          .col-sm-9
+            textarea#otc.form-control(rows='3')
+        .form-group
+          label.col-sm-3.control-label(for='useMedical') 常用している一般薬、健康食品 ：
+          .col-sm-9
+            textarea#useMedical.form-control(rows='3')
+        .form-group
+          label.col-sm-3.control-label(for='medicalInstitution') かかっている医療機関 ：
+          .col-sm-9
+            textarea#medicalInstitution.form-control(rows='3')
+        .form-group
+          .col-sm-offset-3.col-sm-9
+            button.btn.btn-lg.btn-primary(type='submit')
+              i.glyphicon.glyphicon-floppy-save
+              | 保存
+  /if lte IE 8
+  script(src='http://code.jquery.com/jquery-2.0.3.min.js')
+  script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js')
+  script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js')
+  script(src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+  script(src='js/min/script.min.js')
+  script(src='https://apis.google.com/js/client.js?onload=initialize')

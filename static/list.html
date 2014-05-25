@@ -1,0 +1,64 @@
+<!DOCTYPE html>  
+<html lang="ja">  
+<head>   
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<title>お薬一覧 : お薬手帳</title>
+<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body id="list">
+<nav class="navbar navbar-fixed-bottom">
+  <div class="navbar-inner clearfix">
+    <ul class="nav">
+        <li><a href="index.html"><span class="glyphicon glyphicon-calendar"></span><br />今日のお薬</a></li>
+        <li><a href="regist.html"><span class="glyphicon glyphicon-pencil"></span><br />お薬を登録</a></li>
+        <li><a href="list.html"><span class="glyphicon glyphicon-list"></span><br />お薬一覧</a></li>
+        <li><a href="profile.html"><span class="glyphicon glyphicon-user"></span><br />プロフィール</a></li>
+    </ul>
+  </div>
+</nav>
+<header>
+<h1>お薬手帳</h1>
+<h2><span class="glyphicon glyphicon-list"></span> お薬一覧</h2>
+</header>
+<main class="container">
+<table class="table table-hover table-responsive">
+<thead>
+  <tr>
+    <th>処方日</th>
+    <th>飲み方</th>
+    <th>錠剤名</th>
+    <th>量</th>
+    <th>個数</th>
+    <th>残数</th>
+    <th>備考</th>
+    <th>編集する</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>2014/1/1</td>
+    <td>食前</td>
+    <td>ペニシリン</td>
+    <td>10mg</td>
+    <td>8個</td>
+    <td>5個</td>
+    <td>頭が痛いので処方された。</td>
+    <td><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> 編集</button></td>
+  </tr>
+  </tbody>
+</table>
+
+</main>
+</body>
+<!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+<![endif]--> 
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="js/min/script.min.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=initialize"></script>
+</html>

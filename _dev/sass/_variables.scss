@@ -1,0 +1,12 @@
+// IE9 in svg
+$experimental-support-for-svg: true;
+
+// color
+$color_main: #1990d5;
+$color_font: #317eac;
+$color_background1: #fff;
+$color_background2: #45aeea;
+
+// gradient
+$bottomColor:   $color_background2;
+$topColor:      lighten($bottomColor, 10%);

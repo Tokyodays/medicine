@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import "compass";
+@import "variables";
+@import "mixins";
+
+html {
+	font-size: 62.5%;
+}
+html, body {
+	font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif !important;
+}
+
+header {
+	border-bottom: 3px solid #1990d5;
+	@include display-flex();
+	@include flex-direction(row);
+	color: $color_font;
+	margin-bottom: 2em;
+	background: $color_background1;
+    @include background-image(linear-gradient(top, $color_background1, darken($color_background1, 3%)));
+    @include filter-gradient($color_background1, lighten($color_background1, 10%), vertical);
+	h1 {
+		@include fontsize(14);
+		@include flex(1);
+		@include order(2);
+		text-align: right;
+		padding-right: 1em;
+	}
+	h2 {
+		@include fontsize(22);
+		@include flex(1);
+		@include order(1);
+		@include text-shadow(rgba(0, 0, 0, 0.1) 1px 1px 0px, rgba(255, 255, 255, 1) -1px -1px 0px);
+		text-align: left;
+		padding-left: 1em;
+	}
+
+}
+
+main {
+	padding-bottom: 7em;
+}
+
+#index main > h1 {
+	@include fontsize(18);
+	line-height: 22px;
+	border-left: 5px solid $color_font;
+	padding-left: 10px;
+
+}
+#regist .perTime {
+	margin: 10px 0 0 10px;
+}
+.navbar-inner{
+	min-height: 50px;
+	padding-right: 20px;
+	padding-left: 20px;
+    background: $bottomColor;
+    @include background-image(linear-gradient(top, $topColor, $bottomColor));
+    @include filter-gradient($topColor, $bottomColor, vertical);
+	background-repeat: repeat-x;
+	border: 1px solid #1990d5;
+	@include border-radius(4px);
+	@include box-shadow(rgba(0,0,0,0.065) 0 1px 4px);
+}
+.navbar-fixed-bottom .navbar-inner {
+	border-width: 1px 0 0;
+}
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+	padding-right: 0;
+	padding-left: 0;
+	@include border-radius(0);
+}
+.navbar-fixed-bottom .navbar-inner {
+	@include box-shadow(rgba(0,0,0,0.1) 0 -1px 10px);
+}
+.navbar .nav {
+	position: relative;
+	left: 0;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+	width:100%;
+	margin:0;
+	> li {
+		line-height: 20px;
+		float: left;
+		width: 25%;
+		text-align: center;
+		> a {
+			font-family: 'Telex',sans-serif;
+			text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+			float: none;
+			padding: 15px 15px 15px;
+			color: #fff;
+			text-decoration: none;
+			text-shadow: 0 1px 0 #54b4eb;
+			&:focus, &:hover {
+				color: #fff;
+				text-decoration: none;
+				background-color: #1684c2;
+			}
+		}
+	}
+	> .active {
+		a, a:hover, a:focus{
+			color: #fff;
+			text-decoration: none;
+			background-color: #1684c2;
+			@include box-shadow(rgba(0,0,0,0.125) 0 3px 8px inset);
+		}
+	}
+}

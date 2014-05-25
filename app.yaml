@@ -1,0 +1,12 @@
+application: medicine-note
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /(.*/)?
+  script: index.py
+
+- url: /(.*)
+  static_files: static/\1
+  upload: static/(.*)
